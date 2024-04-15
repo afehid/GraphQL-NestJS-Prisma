@@ -8,7 +8,4 @@ export class Owner {
 
   @Field()
   name: string;
-
-  // @Field(() => [Pet], { nullable: true })
-  // pets?: Pet[];
 }
