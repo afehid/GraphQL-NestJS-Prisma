@@ -1,73 +1,88 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+Grocery Service
+Project Overview
+Grocery Service is a Node.js application built with the NestJS framework that provides a backend service for managing grocery-related functionalities. This includes APIs for creating, updating, and managing groceries in the system.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Table of Contents
+Prerequisites
+Installation
+Configuration
+Scripts
+Running the Application
+Testing
+Contributing
+License
+Prerequisites
+Before you start, ensure you have the following tools installed:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Node.js (v14.17.0 or higher)
+npm or yarn
+Docker (optional, for containerized development)
+NestJS CLI (optional, for additional NestJS commands)
+Installation
+Clone the repository:
+bash
+Copy code
+git clone <repository-url> grocery_service
+cd grocery_service
+Install dependencies:
+bash
+Copy code
+npm install
+Configuration
+Configure the environment variables by creating a .env file in the root of the project. You can reference the sample provided in the repository.
 
-## Description
+plaintext
+Copy code
+# Sample environment variables
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=groceries
+DB_USER=user
+DB_PASSWORD=secret
+JWT_SECRET=mysecretkey
+Scripts
+The project includes various scripts to streamline development and testing:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+start: Start the application.
+start:dev: Start the application in development mode with watch enabled.
+start:debug: Start the application in debug mode with watch enabled.
+start:prod: Start the application in production mode.
+build: Build the application.
+format: Format code using Prettier.
+lint: Lint code using ESLint.
+test: Run unit tests with Jest.
+test:watch: Run tests in watch mode.
+test:cov: Run tests and generate coverage report.
+test:debug: Run tests in debug mode.
+test:e2e: Run end-to-end tests.
+Running the Application
+To run the application, use the following script:
 
-## Installation
+bash
+Copy code
+npm start
+You can also use development mode for automatic file updates:
 
-```bash
-$ npm install
-```
+bash
+Copy code
+npm run start:dev
+Testing
+Run tests using Jest:
 
-## Running the app
+Unit tests: npm test
+Watch mode: npm run test:watch
+Code coverage: npm run test:cov
+Contributing
+Contributions are welcome! Please read our Contributing Guidelines for detailed instructions on how to contribute to this project.
 
-```bash
-# development
-$ npm run start
+To contribute:
 
-# watch mode
-$ npm run start:dev
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -am 'Add your feature').
+Push to the branch (git push origin feature/your-feature).
+Create a new pull request.
+Please make sure to follow the code of conduct as specified in the repository.
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+License
+This project is licensed under the UNLICENSED license.
